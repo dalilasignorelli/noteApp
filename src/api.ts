@@ -4,8 +4,6 @@ export type Note = {
   body: string    
 }
 
-//`https://jsonplaceholder.typicode.com/posts/${id}`
-
 export const getNotes = async (): Promise<Note[]> => {
   const res = await fetch('http://localhost:4000/notes')
   if (!res.ok) throw new Error('Failed to fetch notes')
